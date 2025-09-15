@@ -15,7 +15,6 @@ export class HomePage {
     await this.page.goto('https://ecommerce-playground.lambdatest.io/');
   }
 
-
 async navigateToCategory(categoryName: string) {
     await this.allCategoriesBtn.click();
     const categoryLink = this.page.getByRole('link', { name: categoryName });
