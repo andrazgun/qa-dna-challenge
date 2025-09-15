@@ -12,8 +12,14 @@ export class ProductPage {
     this.priceLocator = page.locator('.price-new');
   }
 
-  async sortByPriceHighToLow() {
-    await this.sortDropdown.selectOption({ label: 'Price (High > Low)' });
+//   async sortByPriceHighToLow() {
+//     await this.sortDropdown.selectOption({ label: 'Price (High > Low)' });
+//     await this.priceLocator.first().waitFor({ state: 'visible' });
+//   }
+
+
+    async sortBy(label: string) {
+    await this.sortDropdown.selectOption({ label });
     await this.priceLocator.first().waitFor({ state: 'visible' });
   }
 
