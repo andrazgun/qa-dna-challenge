@@ -9,7 +9,6 @@ test.describe('Product Sorting Validation', () => {
 
     await homePage.goto();
     await homePage.navigateToCategory('Desktops');
-    // await productPage.sortByPriceHighToLow();
     await productPage.sortBy('Price (High > Low)');
     await productPage.verifyPricesDescending();
   });
